@@ -37,6 +37,12 @@ $(document).ready(function () {
 		$("#nombre-resultats").text(seismes.length + " séismes trouvés");
 
 		seismes.forEach(function (seisme) {
+			const donnees=seisme.properties;
+			const magnitude=donnees.mag;
+			const lieu=donnees.place;
+			const horaire= new Date(donnees.time).toLocaleString("fr-FR");
+			const conteneurSeisme = $("<p></p>").text("Magnitude : "+ magnitude + " - Lieu : " + lieu + " - Horaires : " + horaire);
+			conteneurSeisme.appendTo($conteneur);
 			console.log(seisme);
 		});
 	}
