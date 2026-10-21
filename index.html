@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Explorez les séismes du monde entier avec SeismoTrack.">
+
+        <title>TerraemotusTrack</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <!-- En-tête du site -->
+        <header class="topbar">
+
+            <a href="#accueil" class="logo">
+                Terraemotus Tracker
+            </a>
+
+            <nav class="navigation">
+                <a href="#accueil" class="nav-link active">Accueil</a>
+                <a href="#recherche" class="nav-link">Recherche</a>
+            </nav>
+
+        </header>
+
+
+        <main id="accueil">
+
+            <!-- Présentation du site -->
+            <section class="hero">
+
+                <div class="hero-content">
+
+                    <h1>
+                        La Terre bouge.<br>
+                        <span>Nous vous informons.</span>
+                    </h1>
+
+                    <p>
+                        Explorez l'activité sismique mondiale et découvrez
+                        les tremblements de terre qui façonnent notre planète.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- formulaire de recherche seismes-->
+            <section id="recherche" class="search-section">
+
+                <h2>Rechercher des séismes</h2>
+
+                <p>Choisissez vos critères de recherche.</p>
+
+                <form id="form-recherche" class="search-form">
+
+                    <!-- periode seisme recherchée -->
+                    <div class="form-group">
+                        <label for="periode">Période</label>
+
+                        <select id="periode" name="periode">
+                            <option value="1">Aujourd'hui</option>
+                            <option value="3" selected>3 derniers jours</option>
+                            <option value="7">7 derniers jours</option>
+                            <option value="30">Dernier mois</option>
+                        </select>
+                    </div>
+
+
+                    <!-- magnitude min -->
+                    <div class="form-group">
+                        <label for="magnitude-min">Magnitude minimale</label>
+
+                        <select id="magnitude-min" name="magnitude-min">
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+
+
+                    <!-- magnitude max -->
+                    <div class="form-group">
+                        <label for="magnitude-max">Magnitude maximale</label>
+
+                        <select id="magnitude-max" name="magnitude-max">
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="10" selected>10</option>
+                        </select>
+                    </div>
+
+
+                    <!-- lieu -->
+                    <div class="form-group">
+                        <label for="lieu">Lieu</label>
+
+                        <input type="text" id="lieu" name="lieu" placeholder="Ex. : France, Japon, Venezuela...">
+                    </div>
+
+
+                    <!-- nombre max résultats -->
+                    <div class="form-group">
+                        <label for="limite">Nombre de résultats</label>
+
+                        <select id="limite" name="limite">
+                            <option value="5" selected>5 résultats</option>
+                            <option value="10">10 résultats</option>
+                            <option value="15">15 résultats</option>
+                            <option value="20">20 résultats</option>
+                            <option value="25">25 résultats</option>
+                            <option value="30">30 résultats</option>
+                        </select>
+                    </div>
+
+
+                    <!-- lancer la recherche -->
+                    <button type="submit" class="search-button">
+                        Rechercher
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- Résultats : les cartes seront ajoutées en JavaScript -->
+            <section id="resultats-section" class="results-section">
+
+                <h2>Résultats de la recherche</h2>
+
+                <p id="nombre-resultats">
+                    Lance une recherche pour découvrir les séismes.
+                </p>
+
+                <div id="resultats" class="results-grid"></div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Pied de page -->
+        <footer class="footer">
+
+            <p>Projet GP5 UEL220</p>
+
+            <a href="#accueil" class="back-top">
+                Retour en haut ↑
+            </a>
+
+        </footer>
+
+    </body>
+
+</html>
