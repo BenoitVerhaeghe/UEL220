@@ -65,7 +65,7 @@ h3 {
 	background-color: #252130;
 	background-image:
 		linear-gradient(rgba(32, 29, 43, 0.45), rgba(32, 29, 43, 0.65)),
-		url("/img/carte monde.webp");
+		url("img/carte monde.webp");
 }
 
 .hero h1 {
